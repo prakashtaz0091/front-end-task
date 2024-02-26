@@ -38,6 +38,7 @@ body {
   font-weight: 600;
 
   padding: 50px 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,6 +176,7 @@ hr {
   }
   .footer-wrapper .sec-3 {
     padding: 100px 0;
+    box-sizing: border-box;
 
     align-items: center;
     justify-content: space-between;
@@ -212,6 +214,7 @@ hr {
     /* align-items: space-between; */
     gap: 50px;
     padding: 35px 0;
+    box-sizing: border-box;
   }
   .copyright {
     display: none;
