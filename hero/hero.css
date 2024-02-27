@@ -321,4 +321,10 @@
     width: 150px;
     height: 200px;
   }
+  .carousel .list .item .title,
+  .carousel .list .item .topic {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.3em;
+  }
 }
