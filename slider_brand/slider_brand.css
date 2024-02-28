@@ -270,7 +270,7 @@ a {
   text-align: center;
 }
 .banner {
-  width: 1000px;
+  /* width: 1000px; */
   height: auto;
   max-width: 65%;
   margin: 60px auto;
@@ -296,7 +296,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  margin-top: 50px;
   text-align: center;
   width: 100%;
 }
@@ -315,12 +316,15 @@ a {
     width: 90vw;
   }
 
+  .star-text {
+    margin-bottom: 10px;
+  }
+
   .banner {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    max-width: 90vw;
+  }
+  .slider {
+    width: 89vw;
   }
 }
 #brand-text {
