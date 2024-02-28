@@ -1,5 +1,4 @@
 let nextDom = document.getElementById("next");
-let prevDom = document.getElementById("prev");
 
 let carouselDom = document.querySelector(".carousel");
 let SliderDom = carouselDom.querySelector(".carousel .list");
@@ -43,10 +42,6 @@ let timeAutoNext = 4000;
 
 nextDom.onclick = function (e) {
   showSlider("next");
-};
-
-prevDom.onclick = function () {
-  showSlider("prev");
 };
 
 let runNextAuto = setTimeout(() => {
