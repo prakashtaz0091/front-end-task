@@ -3,6 +3,10 @@
 }
 
 /* image grid css start */
+.div-img-grid {
+  margin-bottom: 50px;
+}
+
 .image-grid1 {
   display: grid;
   grid-template-columns: 60% 40%;
