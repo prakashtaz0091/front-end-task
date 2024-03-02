@@ -103,7 +103,7 @@ footer {
 }
 
 .ass-img {
-  height: 100px;
+  height: 70px;
   width: auto;
 }
 
@@ -209,6 +209,9 @@ hr {
   .footer-wrapper .sec-3 .social-links {
     display: flex;
     justify-content: center;
+  }
+  .footer-wrapper .associations img {
+    height: 40px;
   }
 }
 

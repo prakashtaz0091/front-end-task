@@ -35,6 +35,39 @@ body::-webkit-scrollbar {
   background-color: var(--color-hr);
 }
 
+.quick-contact {
+  padding: 50px 0;
+  width: 65%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  border-radius: 6px;
+}
+.quick-contact > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-contact-icon {
+  height: 45px;
+  filter: invert(100%);
+}
+.quick-contact > *:hover {
+  color: gray;
+}
+
+.quick-contact-head {
+  font-size: 2em;
+}
+.quick-contact-des {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 576px) {
   .hr {
     display: none;
