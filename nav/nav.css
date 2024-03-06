@@ -168,7 +168,7 @@ nav {
   gap: 10px;
 }
 
-.btn a {
+a {
   text-decoration: none;
   color: inherit;
   text-decoration-color: none;
