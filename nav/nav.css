@@ -88,10 +88,16 @@ header .btn {
   align-items: center;
 }
 
+.ph-number-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .country-flag {
   height: 20px;
   width: auto;
-  padding-right: 8px;
+  padding-right: 2px;
 }
 
 .location {
@@ -144,6 +150,25 @@ header .btn {
   display: none;
 }
 
+.search-btn {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn button {
+  padding: 10px;
+}
+
+.search-btn svg {
+  height: 50px;
+  width: 50px;
+}
+
+.custom-show {
+  /* color: black !important; */
+  display: block;
+}
+
 .small-device-menu {
   display: none;
 }
@@ -166,7 +191,7 @@ header .btn {
 .location-ph-number {
   font-size: 1.4em;
   color: #5b6a6a;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .accordion-body-contact {
@@ -180,6 +205,123 @@ a {
   color: inherit;
   text-decoration-color: none;
 }
+
+.btn-close {
+  display: none;
+}
+
+/* custom accordion in hamburger menu  */
+
+.offcanvas-body .custom-accordion-wrapper {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  margin: auto;
+  position: relative;
+}
+
+.offcanvas-body .accordion {
+  /* outline: 1px solid red; */
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* left: -10px; */
+  transform: translateX(-50%);
+}
+.offcanvas-body .accordion input {
+  display: none;
+}
+.offcanvas-body .box {
+  position: relative;
+  background: white;
+  height: 64px;
+  transition: all 0.15s ease-in-out;
+  width: 90vw;
+}
+.offcanvas-body .box::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+.offcanvas-body header.box {
+  background: #00bcd4;
+  z-index: 100;
+  cursor: initial;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0, 0, 0, 0.12),
+    0 2px 4px -4px rgba(0, 0, 0, 0.24);
+}
+
+.offcanvas-body .box-title {
+  width: 100% !important;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.offcanvas-body .box-content {
+  width: calc(100% - 40px);
+  padding: 30px 20px;
+  font-size: 11pt;
+  color: rgba(0, 0, 0, 0.54);
+  display: none;
+}
+.offcanvas-body .box-close {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+.offcanvas-body input:checked + .box {
+  height: auto;
+  margin: 16px 0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+}
+.offcanvas-body input:checked + .box .box-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+.offcanvas-body input:checked + .box .box-content,
+.offcanvas-body input:checked + .box .box-close {
+  display: inline-block;
+}
+.offcanvas-body .arrows section .box-title {
+  padding-left: 44px;
+  /* width: calc(100% - 64px); */
+}
+.offcanvas-body .arrows section .box-title:before {
+  position: absolute;
+  display: block;
+  content: "\203a";
+  font-size: 18pt;
+  left: 20px;
+  top: -2px;
+  transition: transform 0.15s ease-in-out;
+  color: rgba(0, 0, 0, 0.54);
+}
+.offcanvas-body input:checked + section.box .box-title:before {
+  transform: rotate(90deg);
+}
+
+/* custom accordion in hamburger menu ends */
 
 @media screen and (max-width: 1024px) {
   .nav-wrapper .logo img {
@@ -216,17 +358,15 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-wrapper {
-    height: inherit;
-  }
   .search-menu-wrapper {
-    top: 90px;
+    top: 120px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .nav-wrapper {
     padding: 0 10px;
+    height: 50px;
   }
   .small-device-menu svg {
     height: 20px;
@@ -239,5 +379,8 @@ a {
   .search-menu-wrapper .inputs {
     width: 95%;
     flex-direction: column;
+  }
+  .offcanvas-body .box {
+    width: 80vw;
   }
 }

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./hero/hero.css" />
     <link rel="stylesheet" href="./nav/nav.css" />
     <link rel="stylesheet" href="./footer.css" />
@@ -17,6 +20,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
     <link rel="stylesheet" href="./video_review_slider/slider.css" />
     <link rel="stylesheet" href="./image_slider/image_slider.css">
+    <!-- <link rel="stylesheet" href="./feel_alive_slider/feel_alive_slider.css"> -->
+    <link rel="stylesheet" href="./card/card.css">
+    <link rel="stylesheet" href="./traveller_videos/travel.css">
+    <link rel="stylesheet" type="text/css" href="./review card/review_card.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cabinetGrotesk: "'Cabinet Grotesk', san-serif",
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -218,16 +238,28 @@
                         </ul>
                     </div>
                     <div class="location-ph-number" id="nepal-ph">
-                        <img src="./logos/nepal_flag.webp" alt="" class=" country-flag"> +977 98********
+                        <div class="ph-number-content">
+                            <img src="./logos/nepal_flag.webp" alt="" class=" country-flag">
+                            <p style="display: block;">+977 98********</p>
+                        </div>
                     </div>
                     <div class="location-ph-number" id="bhutan-ph">
-                        <img src="./logos/bhutan_flag.webp" alt="" class=" country-flag"> +975 bhutan-ph
+                        <div class="ph-number-content">
+                            <img src="./logos/bhutan_flag.webp" alt="" class=" country-flag">
+                            <p>+975 bhutan-ph</p>
+                        </div>
                     </div>
                     <div class="location-ph-number" id="china-ph">
-                        <img src="./logos/china_flag.webp" alt="" class=" country-flag"> +86 china-ph
+                        <div class="ph-number-content">
+                            <img src="./logos/china_flag.webp" alt="" class=" country-flag">
+                            <p>+86 china-ph</p>
+                        </div>
                     </div>
                     <div class="location-ph-number" id="japan-ph">
-                        <img src="./logos/japan_flag.webp" alt="" class=" country-flag"> +81 japan-ph
+                        <div class="ph-number-content">
+                            <img src="./logos/japan_flag.webp" alt="" class=" country-flag">
+                            <p> +81 japan-ph</p>
+                        </div>
                     </div>
                 </div>
                 <div class="small-device-menu">
@@ -270,146 +302,48 @@
                                     data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne"> Nepal </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <ul>
-                                                    <li><button class="dropdown-item" type="button">Trekking in
-                                                            Nepal</button></li>
-                                                    <li><button class="dropdown-item" type="button">Climbing and
-                                                            Expedition</button></li>
-                                                    <li><button class="dropdown-item" type="button">Cultural Tour and
-                                                            Mountain Biking</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Luxury
-                                                            Treks</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Luxury
-                                                            Tours</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Day Trips</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Multi Country
-                                                            Tours</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Voluntourism
-                                                            Trips</button>
-                                                    </li>
-                                                    <li><button class="dropdown-item" type="button">Extend Your
-                                                            Trip</button>
-                                                    </li>
-                                                </ul>
+                                <div class="custom-accordion-wrapper">
+                                    <nav class="accordion arrows">
+                                        <input type="radio" name="accordion" id="cb1" />
+                                        <section class="box">
+                                            <label class="box-title" for="cb1">Nepal</label>
+                                            <label class="box-close" for="acc-close"></label>
+                                            <div class="box-content">
+                                                <li> Trekking in Nepal </li>
+                                                <li>Climbing and Expedition</li>
+                                                <li>Cultural Tour and Sightseeing</li>
+                                                <li>Cycling and Mountain Biking</li>
+                                                <li>Luxury Treks</li>
+                                                <li>Luxury Tours</li>
+                                                <li>Day Trips</li>
+                                                <li>Multi Country Tours</li>
+                                                <li>Voluntourism Trips</li>
+                                                <li>Extend Your Trip</li>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo"> Bhutan </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>This is the second item's accordion body.</strong> It is hidden
-                                                by default, until the collapse plugin adds the appropriate classes that
-                                                we use to style each element. These classes control the overall
-                                                appearance, as well as the showing and hiding via CSS transitions. You
-                                                can modify any of this with custom CSS or overriding our default
-                                                variables. It's also worth noting that just about any HTML can go within
-                                                the <code>.accordion-body</code>, though the transition does limit
-                                                overflow.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree"> China/Tibet
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>This is the third item's accordion body.</strong> It is hidden
-                                                by default, until the collapse plugin adds the appropriate classes that
-                                                we use to style each element. These classes control the overall
-                                                appearance, as well as the showing and hiding via CSS transitions. You
-                                                can modify any of this with custom CSS or overriding our default
-                                                variables. It's also worth noting that just about any HTML can go within
-                                                the <code>.accordion-body</code>, though the transition does limit
-                                                overflow.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour"> Japan </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>This is the third item's accordion body.</strong> It is hidden
-                                                by default, until the collapse plugin adds the appropriate classes that
-                                                we use to style each element. These classes control the overall
-                                                appearance, as well as the showing and hiding via CSS transitions. You
-                                                can modify any of this with custom CSS or overriding our default
-                                                variables. It's also worth noting that just about any HTML can go within
-                                                the <code>.accordion-body</code>, though the transition does limit
-                                                overflow.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                aria-expanded="false" aria-controls="collapseFive"> Contact </button>
-                                        </h2>
-                                        <div id="collapseFive" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body  accordion-body-contact ">
-                                                <div class="location-ph-number">
-                                                    <img src="./logos/nepal_flag.webp" alt="" class=" country-flag">
-                                                    +977 98********
-                                                </div>
-                                                <div class="location-ph-number">
-                                                    <img src="./logos/bhutan_flag.webp" alt="" class=" country-flag">
-                                                    +975 bhutan-ph
-                                                </div>
-                                                <div class="location-ph-number">
-                                                    <img src="./logos/china_flag.webp" alt="" class=" country-flag"> +86
-                                                    china-ph
-                                                </div>
-                                                <div class="location-ph-number">
-                                                    <img src="./logos/japan_flag.webp" alt="" class=" country-flag"> +81
-                                                    japan-ph
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                                aria-expanded="false" aria-controls="collapseSix"> About Us </button>
-                                        </h2>
-                                    </div>
+                                        </section>
+                                        <input type="radio" name="accordion" id="cb2" />
+                                        <section class="box">
+                                            <label class="box-title" for="cb2">Read me too</label>
+                                            <label class="box-close" for="acc-close"></label>
+                                            <div class="box-content">Add the class 'arrows' to nav.accordion to add
+                                                dropdown arrows.</div>
+                                        </section>
+                                        <input type="radio" name="accordion" id="cb3" />
+                                        <section class="box">
+                                            <label class="box-title" for="cb3">Item 3</label>
+                                            <label class="box-close" for="acc-close"></label>
+                                            <div class="box-content">Vestibulum ante ipsum primis in faucibus orci
+                                                luctus et ultrices posuere cubilia Curae; Quisque finibus tristique
+                                                nisi, maximus ullamcorper ante finibus eget.</div>
+                                        </section>
+                                        <input type="radio" name="accordion" id="acc-close" />
+                                    </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <div id="search-menu" class="search-menu-wrapper">
                 <div class="inputs">
@@ -430,8 +364,8 @@
                 </div>
                 <div class="search-btn">
                     <button class="btn btn-primary">Search</button>
-                    <svg id="search-menu-close-btn" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <svg id="search-menu-close-btn" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
                         <path
                             d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                     </svg>
@@ -561,6 +495,94 @@
         </div>
     </div>
     <!-- brand and image grid end -->
+    <!-- ways to feel alive -->
+    <div class="feel-alive-wrapper">
+        <div id="app" class="w-full mx-auto px-4 md:px-8 pt-7 pb-12 transition-all duration-500 ease-linear">
+            <h1 class=" text-3xl lg:text-3xl mb-2 text-dark font-bold  ">180+ ways to feel alive </h1>
+            <h3 class="text-neutral-900 mb-8 text-xl  ">Award-winning adventure holidays for every level and ambition
+            </h3>
+            <div class="relative">
+                <div
+                    class="slides-container h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">New Adventures</h5>
+                        <p class=" font-bold feel-alive-trips-value">44 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/6263568/pexels-photo-6263568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">Best Sellers</h5>
+                        <p class=" font-bold feel-alive-trips-value">37 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/3026364/pexels-photo-3026364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">Winter Sun</h5>
+                        <p class=" font-bold feel-alive-trips-value">49 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/10343729/pexels-photo-10343729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">Expeditions</h5>
+                        <p class=" font-bold feel-alive-trips-value">15 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/13860053/pexels-photo-13860053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">Iconic Adventures</h5>
+                        <p class=" font-bold feel-alive-trips-value">20 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/8576739/pexels-photo-8576739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">New Adventures</h5>
+                        <p class=" font-bold feel-alive-trips-value">44 trips</p>
+                    </div>
+                    <div
+                        class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden pos-relative">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/1743367/pexels-photo-1743367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="mountain_image">
+                        <h5 class=" font-bold text-xl feel-alive-text">New Adventures</h5>
+                        <p class=" font-bold feel-alive-trips-value">44 trips</p>
+                    </div>
+                </div>
+                <div class="absolute top-0 -left-4 h-full items-center hidden md:flex">
+                    <button role="button" class="prev px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+                        aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute top-0 -right-4 h-full items-center hidden md:flex">
+                    <button role="button" class="next px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+                        aria-label="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ways to feel alive -->
     <!-- banner start -->
     <img src="./image/banner2.webp" alt="Image Not Found" class="banner">
     <!-- banner ends -->
@@ -626,7 +648,6 @@
                     <div class="grid-item__name">
                         <p class="image-grid-p">NEPAL</p>
                         <p class="image-grid-p2">Lorem ipsum dolor sit amet.</p>
-                        <button class="image-grid-button">Read More</button>
                     </div>
                 </a>
             </li>
@@ -639,7 +660,6 @@
                     <div class="grid-item__name">
                         <p class="image-grid-p">CHINA/TIBET</p>
                         <p class="image-grid-p2">Lorem ipsum dolor sit amet.</p>
-                        <button class="image-grid-button">Read More</button>
                     </div>
                 </a>
             </li>
@@ -654,7 +674,6 @@
                     <div class="grid-item__name">
                         <p class="image-grid-p">BHUTAN</p>
                         <p class="image-grid-p2">Lorem ipsum dolor sit amet.</p>
-                        <button class="image-grid-button">Read More</button>
                     </div>
                 </a>
             </li>
@@ -667,13 +686,41 @@
                     <div class="grid-item__name">
                         <p class="image-grid-p">JAPAN</p>
                         <p class="image-grid-p2">Lorem ipsum dolor sit amet.</p>
-                        <button class="image-grid-button">Read More</button>
                     </div>
                 </a>
             </li>
         </ul>
     </div>
-    <!-- image grid start -->
+    <!-- image grid end -->
+    <!-- travellers video section  -->
+    <div class="traveller-wrapper">
+        <h2 class="traveller-heading">Traveller Videos</h2>
+        <div class="traveller-videos">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/h6Ocify-CUA?si=hhjeNOvw8PldTDHf" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/bY_gRApfoJk?si=BH-3YLbhla-KbD-r" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/ipLPs2gsDss?si=E3mSkIP-diNInXJM" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="see-all-videos">
+            <a href="">See all videos </a>
+            <img src="../icons/right-arrow.png" alt="">
+        </div>
+    </div>
+    <!-- travellers video section ends -->
     <hr class="hr">
     <!-- banner start -->
     <img src="./image/banner.webp" alt="Image Not Found" class="banner">
@@ -731,6 +778,116 @@
         <div class="swiper-pagination"></div>
     </div>
     <!-- video reviews slider section ends -->
+    <!-- expert team section  -->
+    <div class="center-flex">
+        <div class="card-container">
+            <div class="row">
+                <div class="left">
+                    <img src="./image/blog-3.jpg" alt="Avatar" class="avatar">
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <h2 class="text-3xl font-bold">95% RATE OUR GROUP DYNAMIC 5/5</h2>
+                        <p class="container-p">The Secret? The People. You Lovely lot</p>
+                        <p class="container-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            obcaecati consequuntur nemo quasi nam eum laboriosam hic. Dolores, rerum nesciunt. Facilis
+                            nisi asperiores reiciendis nemo harum repellat culpa quasi. Adipisci voluptatibus vel, velit
+                            animi ullam quasi sit ratione fugit, id aspernatur ut impedit nesciunt reprehenderit! A
+                            possimus asperiores sed molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-text-team">
+        <p class="customize-trip-text"><strong class="Customize-bold">Customize your trip</strong> with an expert trip
+            designer</p>
+        <p class="customize-trip-text2">Book your trip when it is perfectly designed and customized, just for you</p>
+    </div>
+    <!--our team carousal  -->
+    <div class="our-team-carousal">
+        <div id="our-team-carousal" class="w-full mx-auto px-4 md:px-8 py-12 transition-all duration-500 ease-linear">
+            <h1 class=" text-3xl lg:text-4xl font-bold mb-12  text-dark text-center ">Our Experts </h1>
+            <div class="relative">
+                <div
+                    class="slides-container h-64 md:h-48 flex gap-6 snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[55vw] before:shrink-0 after:w-[55vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover "
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                    <div
+                        class="slide aspect-square rounded-full h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600"
+                            alt="mountain_image">
+                    </div>
+                </div>
+                <div class="absolute top-0 -left-4 h-full items-center hidden md:flex">
+                    <button role="button" class="prev px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+                        aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute top-0 -right-4 h-full items-center hidden md:flex">
+                    <button role="button" class="next px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+                        aria-label="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- expert team section ends -->
     <!-- image slider start -->
     <div class="star-text-container" id="brand-text">
         <p class="star-text">Popular Right Now</p>
@@ -834,6 +991,137 @@
         </div>
     </div>
     <!-- image slider end -->
+    <!-- review cards slider  -->
+    <div class="review-card">
+        <div class="container rounded">
+            <div class="star-text-container" id="brand-text">
+                <p class="star-text">Customer Loves Us</p>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="owl-item ">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8"> <img src="./image/girl1.webp" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">Megan</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+                            dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8 "> <img src="./image/man1.jpg" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">John</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+                            dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8"> <img src="./image/man2.webp" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">Antony MDr</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+                            dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8"> <img src="./image/man1.jpg" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">Jessica</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial text-justify"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8"> <img src="./image/man1.jpg" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">Jessica</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial text-justify"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card d-flex flex-column justify-center">
+                        <div class="d-flex flex-row profile pt-8"> <img src="./image/man1.jpg" alt=""
+                                class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">Jessica</div>
+                                <p class="text-muted designation">NewYork, Usa</p>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span>
+                            <span class="fas fa-star active-star"></span> <span
+                                class="fas fa-star-half-alt active-star"></span>
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+                        <div class="testimonial text-justify"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review cards slider ends -->
     <!-- featured blogs -->
     <div class="star-text-container" id="brand-text">
         <p class="star-text">Featured Blogs</p>
@@ -902,17 +1190,17 @@
     <!-- quick contact  -->
     <div class="quick-contact">
         <div class="call-us">
-            <img src="./icons/phone.gif" class="quick-contact-icon" alt="call icon">
+            <img src="./icons/phone.png" class="quick-contact-icon" alt="call icon">
             <strong class="quick-contact-head">Call us anytime</strong>
             <small class="quick-contact-des">Contact Number</small>
         </div>
         <div class="message-us">
-            <img src="./icons/message.gif" class="quick-contact-icon" alt="message icon">
+            <img src="./icons/message.png" class="quick-contact-icon" alt="message icon">
             <strong class="quick-contact-head">Send us a message</strong>
             <small class="quick-contact-des">Contact Now</small>
         </div>
         <div class="chat-with-us">
-            <img src="./icons/bubble-chat.gif" class="quick-contact-icon" alt="chat icon">
+            <img src="./icons/chat.png" class="quick-contact-icon" alt="chat icon">
             <strong class="quick-contact-head">Chat with us now</strong>
             <small class="quick-contact-des">Get Started</small>
         </div>
@@ -997,6 +1285,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="./feel_alive_slider/feel_alive_slider.js"></script>
+    <script src="./card/card.js"></script>
 </body>
 <!-- Swiper JS -->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
@@ -1004,5 +1294,7 @@
 <!--Uncomment this line-->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
 <script src="./video_review_slider/slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<script type='text/javascript' src='./review card/review_card.js'></script>
 
 </html>

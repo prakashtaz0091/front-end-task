@@ -1,0 +1,91 @@
+.traveller-wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.traveller-heading {
+  padding-top: 20px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.traveller-videos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.video iframe {
+  width: 25vw; /* Adjust margin/padding as needed */
+  aspect-ratio: 1.8;
+  margin: 10px; /* Adjust spacing between videos */
+}
+
+.see-all-videos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* margin: 10px auto; */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.see-all-videos:hover {
+  background-color: aliceblue;
+}
+.see-all-videos a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.see-all-videos img {
+  height: 20px;
+  aspect-ratio: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .video iframe {
+    width: 24vw; /* Adjust margin/padding as needed */
+    aspect-ratio: 1.8;
+    margin: 10px; /* Adjust spacing between videos */
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .traveller-wrapper {
+    width: 90vw;
+  }
+
+  .traveller-heading {
+    font-size: 1.5rem;
+  }
+
+  .see-all-videos a {
+    font-size: 1.2rem;
+  }
+
+  .video iframe {
+    width: 27vw; /* Adjust margin/padding as needed */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .video iframe {
+    margin: 8px 0;
+    width: 100%; /* Adjust margin/padding as needed */
+  }
+
+  .traveller-heading {
+    font-size: 1.5rem;
+  }
+
+  .see-all-videos a {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,93 @@
+.review-card .container {
+  /* background-color: rgb(81, 78, 78, 0.034); */
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  overflow: hidden;
+}
+.review-card .rounded {
+  width: 80%;
+}
+.review-card .tag {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.review-card .fa-heart {
+  color: rgba(255, 230, 0, 0.959);
+  font-size: 30px;
+}
+
+.review-card .card {
+  height: 300px;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(187, 182, 173);
+}
+
+.review-card .testimonial {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+
+.review-card .active-star {
+  color: #fbc02d;
+  margin-bottom: 8px;
+}
+
+.review-card .active-star:hover {
+  color: #f9a825;
+  cursor: pointer;
+}
+
+.review-card .profile {
+  padding-top: 10px;
+}
+
+.review-card .name {
+  font-weight: 700;
+}
+
+.review-card .designation {
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.review-card .owl-carousel {
+  margin-bottom: 15px;
+}
+
+.review-card .owl-carousel .owl-stage-outer {
+  padding: 40px 10px;
+  height: 380px;
+}
+
+.review-card .owl-carousel .owl-item img {
+  width: 45px !important;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-card .owl-theme .owl-nav [class*="owl-"] {
+  border-radius: 50% !important;
+  background: inherit !important;
+  border: 3px solid #bbb;
+  color: #bbb !important;
+}
+
+.review-card .owl-theme .owl-nav [class*="owl-"]:hover {
+  border: 3px solid #10cac4;
+  color: #10cac4 !important;
+}
+
+@media (max-width: 575.5px) {
+  .review-card .container {
+    margin: 0px;
+    padding: 20px;
+  }
+  .review-card .rounded {
+    width: 90%;
+    margin: auto;
+  }
+}
