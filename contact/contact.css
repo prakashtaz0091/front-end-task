@@ -3,7 +3,7 @@
  
 } */
 
-* {
+/* * {
   --nav-height: 100px;
   --nav-width: 100vw;
   --nav-bg-color: #fff;
@@ -14,8 +14,7 @@
 body::-webkit-scrollbar {
   display: none;
 }
-
-hr {
+*/ hr {
   background-color: #abb2b2 !important;
 }
 .search-menu-wrapper {

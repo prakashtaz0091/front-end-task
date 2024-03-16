@@ -7,7 +7,7 @@
 }
 
 .feel-alive-wrapper {
-  max-width: 80%;
+  max-width: 80% !important;
   margin: auto;
   padding: 0 20px 30px 20px;
   background-color: rgb(81, 78, 78, 0.034);
