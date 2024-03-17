@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
 }
 
 .cutomize-ur-trip {
-  width: 40%;
+  width: 50%;
   margin: 30px auto;
   color: black;
   display: flex;
@@ -108,13 +108,14 @@ body::-webkit-scrollbar {
 }
 
 .cutomize-ur-trip .left {
+  margin-top: 10px;
   flex: 1.5;
   margin-left: 6px;
 }
 
 .cutomize-ur-trip .left-heading {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 7px;
 }
 
@@ -123,12 +124,12 @@ body::-webkit-scrollbar {
   margin: 8px 0;
   outline: none;
   border: none;
-  font-size: 1.7em;
+  font-size: 1.2em;
 }
 
 .cutomize-ur-trip button {
   text-align: center;
-  padding: 10px;
+  padding: 6px;
   flex: 0.5;
   border-radius: 10px;
   font-size: 1.9em;
@@ -140,6 +141,12 @@ body::-webkit-scrollbar {
   }
   .quick-contact-head {
     font-size: 1.5em;
+  }
+  .cutomize-ur-trip {
+    width: 80%;
+    margin: 10px auto;
+    gap: 6px;
+    padding: 6px 8px;
   }
 }
 
@@ -153,5 +160,24 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     gap: 40px;
+  }
+  .cutomize-ur-trip {
+    width: 95%;
+
+    /* padding: 6px 8px; */
+  }
+
+  .cutomize-ur-trip .left-heading {
+    font-size: 1rem;
+  }
+
+  .cutomize-ur-trip input {
+    margin: 2px 0;
+
+    font-size: 1em;
+  }
+
+  .cutomize-ur-trip button {
+    font-size: 1.2em;
   }
 }

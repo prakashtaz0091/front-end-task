@@ -6,8 +6,9 @@
   display: none; /* Safari and Chrome */
 }
 
-.feel-alive-wrapper {
-  max-width: 80% !important;
+.feel-alive-wrapper,
+.pop-right-now-wrapper {
+  width: 80%;
   margin: auto;
   padding: 0 20px 30px 20px;
   background-color: rgb(81, 78, 78, 0.034);
@@ -45,9 +46,119 @@
   text-transform: uppercase;
 }
 
+.lov-icon {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  z-index: 10;
+}
+.lov-icon img {
+  height: 50px;
+  width: auto;
+  filter: invert(1);
+}
+.pop-right-now-wrapper .slides-container {
+  /* height: fit-content; */
+  height: 450px;
+}
+.pop-right-now-wrapper .slide {
+  width: 450px;
+}
+.pop-right-now-wrapper .slide > img {
+  height: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.pop-right-now-wrapper .desc {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background-color: white;
+  padding: 6px 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.pop-right-now-wrapper .desc .title {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 2px;
+}
+
+.pop-right-now-wrapper .more-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 18px 4px;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.pop-right-now-wrapper .more-desc .left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pop-right-now-wrapper .more-desc .left .location,
+.pop-right-now-wrapper .more-desc .left .reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 8px;
+}
+.pop-right-now-wrapper .more-desc .left .reviews i {
+  color: crimson;
+}
+.pop-right-now-wrapper .more-desc .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.pop-right-now-wrapper .more-desc .right .price {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .pop-right-now-wrapper .slide {
+    width: 350px;
+  }
+  .pop-right-now-wrapper .desc .title {
+    font-size: 1.8em;
+  }
+  .pop-right-now-wrapper .desc .more-desc {
+    font-size: 1em;
+  }
+}
+
 @media screen and (max-width: 820px) {
-  .feel-alive-wrapper {
-    max-width: 90vw;
+  .feel-alive-wrapper,
+  .pop-right-now-wrapper {
+    width: 95vw;
+  }
+  .pop-right-now-wrapper .slides-container {
+    /* height: fit-content; */
+    height: 320px;
+  }
+  .pop-right-now-wrapper .slide {
+    width: 300px;
+  }
+
+  .pop-right-now-wrapper .slide > img {
+    height: 200px;
+  }
+  .pop-right-now-wrapper .desc .title {
+    font-size: 1.4em;
+  }
+  .pop-right-now-wrapper .desc .more-desc {
+    font-size: 0.9em;
+  }
+  .pop-right-now-wrapper .desc .more-desc .right .price {
+    font-size: 1.2em;
   }
 }
 
