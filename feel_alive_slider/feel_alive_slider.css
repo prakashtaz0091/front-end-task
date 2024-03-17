@@ -174,4 +174,13 @@
     line-height: 1.2;
     font-size: small;
   }
+
+  #app2 h1 {
+    font-size: 1.6em;
+    margin-bottom: 0 !important;
+    line-height: 1.4;
+  }
+  #app2 h3 {
+    font-size: 1em;
+  }
 }
