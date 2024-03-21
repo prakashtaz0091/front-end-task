@@ -162,15 +162,13 @@ body::-webkit-scrollbar {
     gap: 40px;
   }
   .cutomize-ur-trip {
-    width: 95%;
+    width: 90vw;
 
     /* padding: 6px 8px; */
   }
-
   .cutomize-ur-trip .left-heading {
     font-size: 1rem;
   }
-
   .cutomize-ur-trip input {
     margin: 2px 0;
 
@@ -178,6 +176,17 @@ body::-webkit-scrollbar {
   }
 
   .cutomize-ur-trip button {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+
+  .quick-contact-icon {
+    height: 30px;
+  }
+
+  .quick-contact-head {
+    font-size: 1.5em;
+  }
+  .quick-contact-des {
+    font-size: 1em;
   }
 }

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./footer.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./slider_brand/slider_brand.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./video_review_slider/slider.css" />
     <link rel="stylesheet" href="./image_slider/image_slider.css">
     <link rel="stylesheet" href="./feel_alive_slider/feel_alive_slider.css">
@@ -726,7 +726,6 @@
         </div>
         <div class="swiper-button-next swiper-navBtn"></div>
         <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
     </div>
     <!-- video reviews slider section ends -->
     <!-- expert team section  -->
@@ -1212,65 +1211,120 @@
     </div>
     <!-- review cards slider ends -->
     <!-- featured blogs -->
-    <div class="star-text-container" id="brand-text">
-        <p class="star-text">Featured Blogs</p>
-    </div>
-    <div class="slide-container swiper">
-        <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-                        <div class="card-image">
-                            <img src="./image/blog-1.jpg" alt="blog-img" class="card-img">
+    <div class="latest-travel-wrapper">
+        <div class="latest-head">
+            <div class="left">
+                <strong class=" text-3xl lg:text-3xl  mb-2 text-dark font-bold ">Latest</strong> <span
+                    class="text-3xl lg:text-3xl  mb-2 ml-2 text-dark"> Travel guides</span>
+                <p class="text-neutral-500 my-2 text-l ">View our travel guides giving you travel insights, ideas, and
+                    tips across the world. </p>
+            </div>
+            <div class="right">
+                <label class="select" for="slct">
+                    <select id="slct" required="required">
+                        <option value="" disabled="disabled" selected="selected">Country</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="bhutan">Bhutan</option>
+                        <option value="china">China/Tibet</option>
+                        <option value="japan">Japan</option>
+                    </select>
+                    <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                    </svg>
+                </label>
+                <!-- SVG Sprites-->
+                <svg class="sprites">
+                    <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                        <polyline points="1 1 5 5 9 1"></polyline>
+                    </symbol>
+                </svg>
+            </div>
+        </div>
+        <div class=" slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="./image/blog-1.jpg" alt="blog-img" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="location">
+                                <i class="fa fa-location"></i>
+                                <p>China</p>
+                            </div>
+                            <h5 class="heading"> China in January: Winter Weather and Travel Tips </h5>
+                            <p>March 7, 2024</p>
+                            <p>January is the middle of the winter and low tourist season in China, so expect bitterly
+                                cold weather, especially in north. This... <span class="read-more">Read More</span> </p>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <p class="description large-text">The lorem text the section that contains header with having
-                            open functionality. </p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-                        <div class="card-image">
-                            <img src="./image/blog-5.webp" alt="blog-img" class="card-img">
+                    <div class="card swiper-slide" id="item2">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="./image/blog-5.webp" alt="blog-img" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="location">
+                                <i class="fa fa-location"></i>
+                                <p>China</p>
+                            </div>
+                            <h5 class="heading"> China in January: Winter Weather and Travel Tips </h5>
+                            <p>March 7, 2024</p>
+                            <p>January is the middle of the winter and low tourist season in China, so expect bitterly
+                                cold weather, especially in north. This... <span class="read-more">Read More</span> </p>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <p class="description large-text">The lorem text the section that contains header with having
-                            open functionality. </p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-                        <div class="card-image">
-                            <img src="./image/blog-3.jpg" alt="blog-img" class="card-img">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="./image/blog-3.jpg" alt="blog-img" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="location">
+                                <i class="fa fa-location"></i>
+                                <p>China</p>
+                            </div>
+                            <h5 class="heading"> China in January: Winter Weather and Travel Tips </h5>
+                            <p>March 7, 2024</p>
+                            <p>January is the middle of the winter and low tourist season in China, so expect bitterly
+                                cold weather, especially in north. This... <span class="read-more">Read More</span> </p>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <p class="description large-text">The lorem text the section that contains header with having
-                            open functionality. </p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-                        <div class="card-image">
-                            <img src="./image/blog-6.jpg" alt="blog-img" class="card-img">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="./image/blog-6.jpg" alt="blog-img" class="card-img">
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-content">
-                        <p class="description large-text">The lorem text the section that contains header with having
-                            open functionality. </p>
+                        <div class="card-content">
+                            <div class="location">
+                                <i class="fa fa-location"></i>
+                                <p>China</p>
+                            </div>
+                            <h5 class="heading"> China in January: Winter Weather and Travel Tips </h5>
+                            <p>March 7, 2024</p>
+                            <p>January is the middle of the winter and low tourist season in China, so expect bitterly
+                                cold weather, especially in north. This... <span class="read-more">Read More</span> </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class=" swiper-scrollbar"></div>
+            <!-- <button onclick="test">item2</button> -->
         </div>
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
+        <div class="latest-footer">
+            <button>See all travel guides</button>
+        </div>
     </div>
     <!-- featured blogs ends-->
     <!-- quick contact  -->
@@ -1375,11 +1429,57 @@
     <script src="./card/card.js"></script>
 </body>
 <!-- Swiper JS -->
-<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+
+</script> -->
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+    var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 5,
+        loop: true,
+        centerSlide: "true",
+        fade: "true",
+        grabCursor: "true",
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        //     dynamicBullets: true,
+        // },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+                scrollbar: false
+            },
+        },
+    });
+
+
+
+</script>
 <!-- JavaScript -->
 <!--Uncomment this line-->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-<script src="./video_review_slider/slider.js"></script>
+<!-- <script src="./video_review_slider/slider.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 <script src="./review card/new.js"></script>
 

@@ -166,6 +166,17 @@
   .feel-alive-wrapper {
     padding: 2px;
   }
+  .pop-right-now-wrapper {
+    padding: 0;
+  }
+
+  #app2 {
+    padding: 20px 5px !important;
+  }
+  #app2 h1,
+  #app2 h3 {
+    padding-left: 15px;
+  }
   .feel-alive-wrapper h1 {
     font-size: medium;
   }
