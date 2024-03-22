@@ -17,12 +17,12 @@
 
 body {
   position: relative;
-  height: 100vh;
+  height: 100vh !important;
   background-color: #fff;
   color: #eee;
   font-family: Poppins;
   font-size: 12px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: poppins;
 
   /* overflow: hidden; */

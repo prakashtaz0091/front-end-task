@@ -74,6 +74,21 @@
   border-radius: 50% !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .center-flex .row {
+    width: 98%;
+  }
+  .our-team-carousal {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .our-team-carousal {
+    width: 90vw;
+  }
+}
+
 @media (max-width: 991px) {
   .center-flex .row .right .content {
     padding: 0;
@@ -85,6 +100,13 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .our-team-carousal {
+    width: 95vw;
+  }
+}
+
 @media (max-width: 767px) {
   .center-flex .row {
     width: 90%;
