@@ -161,6 +161,9 @@ body::-webkit-scrollbar {
     gap: 6px;
     padding: 6px 8px;
   }
+  .offcanvas-body .accordion {
+    left: 15% !important;
+  }
 }
 
 @media screen and (max-width: 576px) {

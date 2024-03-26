@@ -190,7 +190,9 @@ header .btn {
 #japan-ph {
   display: none;
 }
-
+.location {
+  font-size: 0.8rem;
+}
 .location-ph-number {
   font-size: 1.4em;
   color: #5b6a6a;

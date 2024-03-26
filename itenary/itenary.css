@@ -7,9 +7,19 @@
 /* Apply Montserrat font to body by default */
 body {
   font-family: "Montserrat", sans-serif;
+  margin-top: 80px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
+.footer {
+  background-color: black !important;
+  color: white;
+}
 /* Apply Playfair Display font to headings */
+
 h1,
 h2,
 h3,
@@ -31,14 +41,15 @@ p {
   margin: auto;
 }
 .faq-question {
-  width: 95%;
-  margin: auto;
+  /* width: 95%; */
+  /* margin: auto; */
   font-weight: bold;
   .colapse-icon {
     color: black;
   }
+  font-size: medium;
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 8px 0 8px 8px;
   border: none;
   text-align: left;
   outline: none;
@@ -61,6 +72,7 @@ p {
   background-color: #ccc;
   border-radius: 5px;
   margin: 0;
+  padding: 16px 0 16px 8px;
 }
 .trip-departure {
   width: 100%;
@@ -70,7 +82,7 @@ p {
   display: none;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .faq-p {
@@ -429,6 +441,7 @@ p {
   font-size: 16px;
   padding: 10px;
   margin: 0;
+  text-align: start;
 }
 /* trip-overview end */
 /* oveview-below-text start */
@@ -441,7 +454,7 @@ p {
   font-size: 16px;
 }
 .short-itenary {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .s-i-point {
@@ -458,6 +471,7 @@ p {
 p {
   text-align: justify;
 }
+
 @media screen and (max-width: 820px) {
   .left-overview {
     padding: 10px;
