@@ -1,0 +1,704 @@
+/* Import Montserrat font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+/* Import Playfair Display font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+/* Apply Montserrat font to body by default */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Apply Playfair Display font to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+p {
+  line-height: 1.5;
+}
+/* faq start */
+.colapse {
+  width: 90%;
+  margin: auto;
+}
+.colapse-point {
+  width: 90%;
+  margin: auto;
+}
+.faq-question {
+  width: 95%;
+  margin: auto;
+  font-weight: bold;
+  .colapse-icon {
+    color: black;
+  }
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  text-align: left;
+  outline: none;
+  width: 100%;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.faq-ans {
+  margin: auto;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  width: 98%;
+  margin: auto;
+}
+/* .faq-qsn {
+  margin: 0;
+} */
+.faq-qsn2 {
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 0;
+}
+.trip-departure {
+  width: 100%;
+}
+.faq-answer {
+  padding: 0 16px;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  width: 80%;
+  margin: auto;
+}
+.faq-p {
+  padding: 8px 16px;
+  margin: 0;
+}
+.arrow-down {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+.faq-question.expanded {
+  background-color: #ccc;
+}
+.faq-question.expanded .arrow-down {
+  transform: translateY(-50%) rotate(180deg);
+}
+.c-hr {
+  border: 1px solid rgba(171, 164, 164, 0.334);
+}
+
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse-header {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.collapse-content {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+}
+
+.collapse-image {
+  width: 100%; /* Set width to 100% */
+  margin-bottom: 10px; /* Add some space between image and text */
+}
+
+.collapse-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.collapse-text {
+  width: 100%; /* Set width to 100% */
+  text-align: justify;
+}
+.c-text-icon {
+  color: black;
+}
+.colapse-h1,
+.colapse-h2 {
+  margin-top: 0;
+}
+.co-text {
+  margin: 0;
+}
+.colapse-included {
+  padding: 10px;
+}
+/* departure start */
+.departure-item {
+  /* width: 100%;
+  margin: auto; */
+  display: flex;
+  justify-content: space-between;
+}
+.garantee {
+  color: green;
+  display: flex;
+  align-items: center;
+}
+.dep-h4 {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.departure-date {
+  width: 100%;
+  margin: 0;
+}
+.dep-p {
+  margin: 0;
+  font-size: 12px;
+}
+.dep-p2 {
+  font-weight: bold;
+  color: #a4a2a2;
+}
+.dep-h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.dep-right-h1 {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.dep-button {
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px 15px;
+  background-color: none;
+}
+.dep-button:hover {
+  padding: 10px 15px;
+  color: rgb(103, 217, 103);
+  transition: ease-in-out 0.3s;
+  border: 1px solid rgb(103, 217, 103);
+}
+.dep-del-price {
+  display: flex;
+  align-items: center;
+}
+.dep-p2-last-minut {
+  font-weight: bold;
+  color: red;
+}
+.dep-p2-green {
+  font-weight: bold;
+  color: rgb(103, 217, 103);
+}
+/* accom start */
+.accom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.accom-day {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.accom-meal {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+  padding: 5px;
+  margin: 0 5px;
+}
+.accom-hotel {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.accom-icon {
+  color: rgba(15, 115, 129, 0.534);
+}
+.accom-icon-check {
+  color: green;
+}
+.accom-icon-day {
+  color: red;
+}
+.accon-head {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+.accom-p {
+  margin: 0;
+}
+.accom-h2 {
+  margin: 0;
+}
+.arriv {
+  display: flex;
+  flex-direction: column;
+}
+.extra-accom {
+  display: flex;
+  justify-content: space-between;
+}
+.extra-accom-p {
+  font-weight: bold;
+  margin: 0;
+}
+.extra-accom-p2 {
+  text-align: right;
+  font-weight: bold;
+  color: #a7a0a0;
+  margin: 0;
+}
+
+/* review faq */
+.name-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-name {
+  font-weight: bold;
+}
+.rev-star {
+  color: gold;
+}
+.rev-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rev-img img {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* accom end */
+/* faq end */
+.it-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.one-by-two-image-grid {
+  display: flex;
+  gap: 5px; /* Adjust the gap size as needed */
+}
+
+.left-img {
+  flex: 0 0 65%;
+  display: flex;
+}
+
+.right-img {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.right-img .image-2,
+.right-img .image-3 {
+  flex-grow: 1;
+}
+
+/* it button */
+.it-button {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.it-button-text {
+  flex: 0 0 65%;
+}
+
+.it-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items at the start */
+}
+.fas {
+  padding-right: 10px;
+  font-size: 20px;
+  width: 20px;
+}
+.fass {
+  color: rgba(15, 115, 129, 0.534);
+}
+.btn-fass {
+  color: rgb(255, 255, 255);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.price-text {
+  padding: 20px;
+}
+.but {
+  display: flex;
+  flex-direction: column;
+}
+
+.it-btn1,
+.it-btn2 {
+  background-color: #007bff; /* Blue background for btn1 */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add margin between buttons */
+}
+.it-p {
+  line-height: 1.5;
+}
+.it-btn2 {
+  background-color: #28a745; /* Green background for btn2 */
+}
+.it-btn2:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #236132; /* Green background for btn2 */
+}
+.it-btn1:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #153a4f; /* Green background for btn2 */
+}
+/* it button end */
+/* trip-overview start */
+.trip-overview {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+}
+
+.it-heading {
+  margin-right: 10px;
+  margin-top: 0; /* Adjust spacing between heading and horizontal rule */
+}
+
+.it-hr {
+  flex: 1; /* Allow horizontal rule to take up remaining space */
+  height: 0; /* Hide default horizontal rule height */
+}
+.overview-container {
+  display: flex;
+}
+
+.left-overview {
+  flex: 1;
+  /* Add any additional styling */
+}
+
+.right-overview {
+  flex: 1;
+  /* Add any additional styling */
+}
+.point {
+  display: flex;
+  align-items: center;
+}
+.o-text {
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+}
+/* trip-overview end */
+/* oveview-below-text start */
+.overview-below {
+  width: 90%;
+  margin: auto;
+}
+.overview-below-text {
+  line-height: 1.5;
+  font-size: 16px;
+}
+.short-itenary {
+  width: 80%;
+  margin: auto;
+}
+.s-i-point {
+  display: flex;
+  align-items: center;
+}
+.point-day {
+  padding-right: 30px;
+  font-weight: bold;
+}
+.short-itenary hr {
+  border: 1px solid #6d756f28;
+}
+p {
+  text-align: justify;
+}
+@media screen and (max-width: 820px) {
+  .left-overview {
+    padding: 10px;
+  }
+  .right-overview {
+    padding: 10px;
+  }
+
+  .it-button {
+    flex-direction: column; /* Change direction to column for small screens */
+    align-items: center; /* Center elements */
+  }
+
+  .it-button-text {
+    flex: 0 0 100%; /* Full width for small screens */
+    margin-bottom: 0px; /* Add margin bottom to separate from buttons */
+  }
+
+  .it-b {
+    flex: 0 0 100%; /* Full width for small screens */
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-text {
+    margin: 0;
+    padding: 0;
+  }
+  .it-hr {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .rev-img img {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .one-by-two-image-grid {
+    flex-direction: column;
+  }
+
+  .right-img {
+    flex-direction: row;
+  }
+  .it-button {
+    padding: 10px;
+    flex-direction: column; /* Change direction to column for small screens */
+    align-items: center; /* Center elements */
+  }
+
+  .it-button-text {
+    flex: 0 0 100%; /* Full width for small screens */
+    margin-bottom: 0px; /* Add margin bottom to separate from buttons */
+  }
+
+  .it-b {
+    flex: 0 0 100%; /* Full width for small screens */
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-text {
+    margin: 0;
+    padding: 0;
+  }
+  .it-hr {
+    display: none;
+  }
+  .it-heading {
+    font-size: 16px;
+  }
+  .it-p,
+  .o-text,
+  .overview-below-text {
+    font-size: 12px;
+  }
+  .short-itenary-point {
+    margin: 0;
+    font-size: 12px;
+  }
+  .point-day {
+    font-size: 14px;
+    padding: 15px;
+  }
+  .short-itenary {
+    width: 90%;
+    margin: auto;
+  }
+  .overview-container {
+    display: block;
+  }
+  .left-overview {
+    padding: 0px;
+  }
+  .right-overview {
+    padding: 0px;
+  }
+  .faq-question {
+    font-size: 14px;
+  }
+  .arrow-down {
+    font-size: 12px;
+  }
+  .fq {
+    font-size: 12px;
+  }
+  .colapse-h1 {
+    font-size: 16px;
+  }
+  .colapse-h2 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .faq-answer {
+    width: 98%;
+    margin: auto;
+  }
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .fas {
+    font-size: 14px;
+  }
+  .co-text {
+    text-align: left;
+  }
+  .dinner {
+    width: 100%;
+  }
+  .accom-meal {
+    padding: 0px;
+    width: 95%;
+    margin: auto;
+  }
+  .accom-meal .co-text {
+    font-size: 8px;
+  }
+  .collapse-container {
+    width: 95%;
+    margin: auto;
+  }
+  .accom-container .fas {
+    font-size: 10px;
+    padding-right: 5px;
+  }
+  .accom-h2 {
+    font-size: 12px;
+    /* padding-top: 10px; */
+  }
+  .accon-head {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .extra-accom-p,
+  .extra-accom-p2,
+  .extra-accom-p3 {
+    font-size: 8px;
+    text-align: left;
+  }
+  .optionals {
+    font-size: 10px;
+  }
+  .extra-accom-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .extra-accom-p2 {
+    right: 0;
+    text-align: right;
+  }
+  .pp3 {
+    text-align: right;
+  }
+  .it-review-container .fas {
+    padding: 0px;
+    margin: 0;
+    font-size: 14px;
+  }
+  .carbon-li {
+    font-size: 10px;
+  }
+  .fqqsn .faq-qsn {
+    font-size: 12px;
+  }
+  .fqqsn {
+    padding-top: 10px;
+  }
+  .dep-h3 {
+    font-size: 10px;
+  }
+  .dep-p2-last-minut,
+  .dep-del-price,
+  .dep-h4,
+  .dep-p2,
+  .dep-p {
+    font-size: 8px;
+  }
+  del {
+    font-size: 10px;
+  }
+  .dep-right-h1 {
+    text-align: right;
+    font-size: 10px;
+  }
+  .dep-button {
+    text-align: right;
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+  .dep-button:hover {
+    padding: 5px 5px;
+    color: rgb(103, 217, 103);
+    transition: ease-in-out 0.3s;
+    border: 1px solid rgb(103, 217, 103);
+  }
+  .right-departure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .colapse-point {
+    width: 95%;
+    margin: auto;
+  }
+  .rev-img img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+}
