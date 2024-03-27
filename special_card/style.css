@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "Miller Display"; /* Provide a name for your font */
+  src: url("../fonts/Miller\ Display\ Roman.otf") format("truetype"); /* 
+    Path to your font file */
+}
+/* body {
+  margin: 10px;
+  padding: 0;
+} */
+* {
+  --color-cool-gray: #5b6a6a;
+  --color-dark-cool-gray: #373e3e;
+  --color-teal: #00a8b6;
+  --color-dark-teal: #077e86;
+  --color-border: #e6e6e6;
+  --color-smoke-white: #f1f1f1;
+  --color-dark-red: #c64e4e;
+  --transition-time: 0.3s;
+  --transition-easing: cubic-bezier(0.42, 0, 0.58, 1);
+  --line-height: 1.5;
+}
+
+.special-cards-wrapper {
+  width: 80%;
+  margin: 50px auto;
+  h2 {
+    font-family: "Merriweather sans", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-cool-gray);
+  }
+  .special-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .special-card {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      width: clamp(300px, 400px, 450px);
+      /* outline: 2px solid red; */
+      border-radius: 10px;
+      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.13);
+      will-change: box-shadow;
+      transition-property: box-shadow;
+      transition-duration: var(--transition-time);
+      transition-timing-function: var(--transition-easing);
+
+      .card-head {
+        overflow: hidden;
+        width: inherit;
+        /* outline: 2px solid blue; */
+        height: 250px;
+        width: auto;
+        border-radius: 3px;
+        position: relative;
+        img {
+          height: inherit;
+          width: auto;
+          object-fit: cover;
+        }
+
+        .card-title {
+          position: absolute;
+          bottom: 3px;
+          color: white;
+          font-family: "Miller Display", sans;
+          font-weight: 900;
+          padding: 8px;
+          font-size: 1.5em;
+          z-index: 2;
+          letter-spacing: 1.2;
+        }
+        .love-icon {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: white;
+          padding: 10px 10px 6px 10px;
+          border-radius: 50%;
+
+          i {
+            font-size: 1.3rem;
+            color: var(--color-cool-gray);
+          }
+        }
+      }
+      .card-head::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.553),
+          rgba(0, 0, 0, 0.815)
+        );
+        /* Adjust gradient colors and direction as needed */
+        z-index: 1; /* Ensures the overlay sits on top of the image */
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+
+        .card-desc {
+          display: flex;
+          justify-content: space-between;
+          font-family: "Merriweather Sans", sans-serif;
+          margin-bottom: 16px;
+          .desc-left {
+            display: flex;
+            flex-direction: column;
+
+            .price {
+              /* display: flex; */
+              font-weight: 350;
+              color: var(--color-cool-gray);
+              line-height: 1.5;
+              margin-bottom: 3px;
+              strong {
+                font-weight: 800;
+                font-size: 1.2em;
+              }
+              .original-price {
+                text-decoration: line-through;
+              }
+              .discounted-price {
+                color: var(--color-dark-red);
+              }
+            }
+            .guided-group {
+              font-weight: 300;
+              font-size: 0.8em;
+              color: var(--color-cool-gray);
+              margin-bottom: 10px;
+            }
+            .short-desc {
+              color: var(--color-cool-gray);
+              font-weight: 350;
+              font-size: 0.9em;
+            }
+          }
+          .desc-right {
+            width: 100px;
+            background-color: var(--color-smoke-white);
+            border-radius: 2px;
+            img {
+              width: inherit;
+            }
+            p {
+              font-weight: 350;
+              font-size: 0.8em;
+              text-align: center;
+              color: var(--color-cool-gray);
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+        .view-details {
+          border: none;
+          padding: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1.2px;
+          background-color: var(--color-teal);
+          color: white;
+          border-radius: 3px;
+        }
+        .view-details:hover {
+          background-color: var(--color-dark-teal);
+        }
+        .rating-and-reviews {
+          margin-top: 25px;
+          font-family: "Merriweather Sans", sans-serif;
+          font-weight: 400;
+          font-size: 0.9em;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            font-size: 0.8em;
+          }
+          .rated {
+            color: orangered;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .special-cards-wrapper {
+    width: 80%;
+    .special-cards {
+      width: 100%;
+      justify-content: space-between;
+      .special-card {
+        width: 400px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 912px) {
+  .special-cards-wrapper {
+    width: 90%;
+    .special-cards {
+      .special-card {
+        width: 380px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .special-cards-wrapper {
+    width: 95%;
+    .special-cards {
+      .special-card {
+        width: 380px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .special-cards-wrapper {
+    width: 95%;
+    .special-cards {
+      .special-card {
+        width: 355px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .special-cards-wrapper {
+    width: 90%;
+    .special-cards {
+      justify-content: center;
+      .special-card {
+        width: 355px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 365px) {
+  .special-cards-wrapper {
+    width: 90%;
+    .special-cards {
+      justify-content: center;
+      .special-card {
+        width: 345px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 325px) {
+  .special-cards-wrapper {
+    width: 98%;
+
+    .special-cards {
+      width: 100%;
+      .special-card {
+        width: 310px;
+
+        .card-head {
+          height: 200px;
+          .card-title {
+            font-size: 1em;
+          }
+          .love-icon {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+              font-size: 1em;
+            }
+          }
+        }
+
+        .card-body {
+          padding: 8px;
+          .card-desc {
+            .desc-left {
+              .price {
+                /* display: flex; */
+
+                strong {
+                  font-size: 1em;
+                }
+              }
+              .guided-group {
+                font-size: 0.7em;
+                margin-bottom: 2px;
+              }
+              .short-desc {
+                font-size: 0.75em;
+              }
+            }
+            .desc-right {
+              p {
+                font-size: 0.6em;
+              }
+            }
+          }
+          .view-details {
+            font-size: 0.7em;
+            padding: 12px;
+          }
+
+          .rating-and-reviews {
+            font-size: 0.7em;
+
+            i {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
